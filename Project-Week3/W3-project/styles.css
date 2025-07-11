@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #ff7f50;
+  --secondary-color: #f0f0f0;
+  --text-dark: #333;
+  --accent-color: #32cd32;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: white;
+}
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: var(--accent-color);
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: url('https://images.stockcake.com/public/6/f/e/6fe8daec-1ee2-4555-8de9-f0e64530bc63_large/fruit-splash-display-stockcake.jpg') no-repeat center/cover;
+  height: 70vh;
+  color: white;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.hero button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+.hero button:hover {
+  transform: scale(1.1);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.feature {
+  background-color: lightyellow;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.feature:hover {
+  transform: translateY(-5px);
+}
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+}
+footer::before {
+  content: "✨ ";
+}
+footer {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+}
